@@ -11,7 +11,7 @@ const BEEHIIV_API_KEY = process.env.BEEHIIV_API_KEY; // Secure API Key
 const PUBLICATION_ID = "pub_27b3d0c9-3d70-4c28-b859-6c47f15a8f7f";
 
 // Proxy route to handle subscription
-app.post("/subscribe", async (req, res) => {
+app.post("/", async (req, res) => {
     try {
         const response = await axios.post(
             `https://api.beehiiv.com/v2/publications/${PUBLICATION_ID}/subscriptions`,
