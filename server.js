@@ -7,8 +7,8 @@ const app = express();
 app.use(express.json());
 app.use(cors()); // Allows Webflow to send requests
 
-const BEEHIIV_API_KEY = "IXcZFLWizfAsjJlK83bysOTuYyscXdqKSYLay9CzfWESplQ2ROGYBmy9lfW7cMJH"; // Secure API Key
-const PUBLICATION_ID = "pub_27b3d0c9-3d70-4c28-b859-6c47f15a8f7f";
+const BEEHIIV_API_KEY = process.env.API_KEY;
+const PUBLICATION_ID = process.env.PUBLIC_KEY;
 
 // Proxy route to handle subscription
 app.post("/", async (req, res) => {
